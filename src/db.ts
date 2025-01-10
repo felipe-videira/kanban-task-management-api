@@ -6,6 +6,6 @@ export default () => {
             .then(() => { console.log('Database connected successfully'); })
             .catch((error: unknown) => { console.error('Database connection error:', error); });
     } else {
-        console.error("DB_URL not set")
+        console.error("DB_URL was not set")
     }
 }
