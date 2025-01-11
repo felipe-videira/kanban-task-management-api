@@ -14,8 +14,8 @@ export const get = async () => {
 };
 
 export const getById = async (id: string) => {
-  const [ board ] = await Board.find({ _id: id, deleted: 0 }, { title: 1 })
-  return board;
+  const boards = await Board.find({ _id: id, deleted: 0 }, { title: 1 })
+  return boards.length === 1 ? boards[0] : null;
 };
 
 export const del = async (id: string) => {
